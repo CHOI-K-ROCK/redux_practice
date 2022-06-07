@@ -1,26 +1,26 @@
 import React from 'react';
-import './App.css';
-import { useSelector, useDispatch } from 'react-redux';
-import {
-  plusCounter,
-  minusCounter,
-  clearCounter,
-} from './redux/counter/actions';
+import styled from 'styled-components';
+
+import Array from './components/Array';
+import Counter from './components/Counter';
+
+const Container = styled.section`
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+`;
 
 function App() {
-  const state = useSelector((state: { count: number }) => state);
-  const dispatch = useDispatch();
-  console.log(state);
-
   return (
-    <div className="App">
-      <div className="count">{state.count}</div>
-      <div className="buttons">
-        <button onClick={() => dispatch(plusCounter())}>더하기</button>
-        <button onClick={() => dispatch(minusCounter())}>빼기</button>
-        <button onClick={() => dispatch(clearCounter())}>초기화</button>
-      </div>
-    </div>
+    <Container>
+      <Counter />
+      <Array />
+    </Container>
   );
 }
 

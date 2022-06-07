@@ -1,4 +1,3 @@
-import { Reducer, Action } from '@reduxjs/toolkit';
 import { PLUS_COUNTER, MINUS_COUNTER, CLEAR_COUNTER } from './types';
 
 const initialState = {
