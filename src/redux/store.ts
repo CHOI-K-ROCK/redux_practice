@@ -5,10 +5,12 @@ import {
 
 import counterReducer from './counter/reducer';
 import arrayReducer from './array/reducer';
+import textReducer from './text/reducer';
 
 const reducer = combineReducers({
   counterReducer,
   arrayReducer,
+  textReducer,
 });
 
 const store = createStore(reducer);
