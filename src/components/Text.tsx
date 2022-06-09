@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateText } from '../redux/actions/text';
+import { updateText } from '../modules/text';
 import styled from 'styled-components';
 
 const Container = styled.section`

@@ -4,11 +4,11 @@ import counterReducer from './counter';
 import objectReducer from './object';
 import textReducer from './text';
 
-const reducers = combineReducers({
-  counterReducer,
+const rootReducer = combineReducers({
   arrayReducer,
-  textReducer,
+  counterReducer,
   objectReducer,
+  textReducer,
 });
 
-export default reducers;
+export default rootReducer;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
-import { addElem, removeElem } from '../redux/actions/array';
+import { addElem, removeElem } from '../modules/array';
 
 const Container = styled.section`
   display: grid;

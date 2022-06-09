@@ -1,3 +1,0 @@
-export const UPDATE_TITLE = 'UPDATE_TITLE';
-export const UPDATE_CONTENT = 'UPDATE_CONTENT';
-export const CLEAR_OBJECT = 'CLEAR_OBJECT';
