@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
-import { addElem, removeElem, clearElem } from '../redux/array/actions';
+import { addElem, removeElem } from '../redux/array/actions';
 
 const Container = styled.section`
   display: grid;
@@ -23,7 +23,7 @@ const Container = styled.section`
     position: absolute;
     top: -18px;
   }
-  .inputWrapper {
+  .input_wrapper {
     margin-top: 20px;
   }
 
@@ -61,7 +61,7 @@ function Array(): JSX.Element {
             </div>
           );
         })}
-        <div className="inputWrapper">
+        <div className="input_wrapper">
           <input
             type="text"
             value={inputValue}

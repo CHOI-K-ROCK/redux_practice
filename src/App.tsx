@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Array from './components/Array';
 import Counter from './components/Counter';
+import Object from './components/Object';
 import Text from './components/Text';
 
 const Container = styled.section`
@@ -22,6 +23,7 @@ function App() {
       <Counter />
       <Text />
       <Array />
+      <Object />
     </Container>
   );
 }

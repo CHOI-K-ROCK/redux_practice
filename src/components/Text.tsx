@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateText } from '../redux/text/actions';
 import styled from 'styled-components';
@@ -26,13 +26,21 @@ function Text(): JSX.Element {
   );
   const dispatch = useDispatch();
 
+  const [inputValue, setInputValue] = useState<string>('');
+
   return (
     <Container>
       <div className="title">Text</div>
       <p>{state.textReducer.content}</p>
       <div className="inputWrapper">
-        <input type="text" />
-        <button onClick={() => dispatch(updateText('some'))}>업데이트</button>
+        <input
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        <button onClick={() => dispatch(updateText(inputValue))}>
+          업데이트
+        </button>
       </div>
     </Container>
   );

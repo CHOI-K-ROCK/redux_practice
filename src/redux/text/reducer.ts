@@ -1,7 +1,7 @@
 import { UPDATE_TEXT, CLEAR_TEXT } from './types';
 
 const initialState = {
-  content: '기본상태',
+  content: '',
 };
 
 const textReducer = (
