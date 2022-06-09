@@ -1,4 +1,4 @@
-import { ADD_ELEM, REMOVE_ELEM, CLEAR_ELEM } from './types';
+import { ADD_ELEM, REMOVE_ELEM, CLEAR_ELEM } from '../types/array';
 
 const initialState = {
   arr: ['기본데이터1', '기본테이터 2'],

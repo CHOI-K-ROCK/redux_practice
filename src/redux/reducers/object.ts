@@ -1,4 +1,4 @@
-import { UPDATE_CONTENT, UPDATE_TITLE, CLEAR_OBJECT } from './types';
+import { UPDATE_CONTENT, UPDATE_TITLE, CLEAR_OBJECT } from '../types/object';
 
 const initialState = {
   obj: {

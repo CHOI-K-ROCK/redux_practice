@@ -1,4 +1,4 @@
-import { UPDATE_TEXT, CLEAR_TEXT } from './types';
+import { UPDATE_TEXT, CLEAR_TEXT } from '../types/text';
 
 const initialState = {
   content: '',

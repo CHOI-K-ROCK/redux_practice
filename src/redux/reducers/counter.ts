@@ -1,4 +1,4 @@
-import { PLUS_COUNTER, MINUS_COUNTER, CLEAR_COUNTER } from './types';
+import { PLUS_COUNTER, MINUS_COUNTER, CLEAR_COUNTER } from '../types/counter';
 
 const initialState = {
   count: 0,

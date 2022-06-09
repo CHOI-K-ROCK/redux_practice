@@ -5,7 +5,7 @@ import {
   plusCounter,
   minusCounter,
   clearCounter,
-} from '../redux/counter/actions';
+} from '../redux/actions/counter';
 
 const Container = styled.section`
   position: relative;

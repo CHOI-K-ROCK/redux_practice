@@ -1,4 +1,4 @@
-import { ADD_ELEM, REMOVE_ELEM, CLEAR_ELEM } from './types';
+import { ADD_ELEM, REMOVE_ELEM, CLEAR_ELEM } from '../types/array';
 
 export const addElem = (value: string) => {
   return {
