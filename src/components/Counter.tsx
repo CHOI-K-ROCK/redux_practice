@@ -1,11 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  plusCounter,
-  minusCounter,
-  clearCounter,
-} from '../redux/counter/actions';
+import { plusCounter, minusCounter, clearCounter } from '../modules/counter';
 
 const Container = styled.section`
   position: relative;

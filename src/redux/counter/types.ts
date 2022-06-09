@@ -1,3 +1,0 @@
-export const PLUS_COUNTER = 'PLUS_COUNTER';
-export const MINUS_COUNTER = 'MINUS_COUNTER';
-export const CLEAR_COUNTER = 'CLEAR_COUNTER';

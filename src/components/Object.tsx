@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { updateTitle, updateContent } from '../redux/object/actions';
+import { updateTitle, updateContent } from '../modules/object';
 
 const Container = styled.section`
   position: relative;

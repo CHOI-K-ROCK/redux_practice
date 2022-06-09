@@ -1,4 +1,18 @@
-import { UPDATE_TEXT, CLEAR_TEXT } from './types';
+export const UPDATE_TEXT = 'text/UPDATE_TEXT';
+export const CLEAR_TEXT = 'text/CLEAR_TEXT';
+
+export const updateText = (value: string) => {
+  return {
+    type: UPDATE_TEXT,
+    payload: { value },
+  };
+};
+
+export const clearText = () => {
+  return {
+    type: CLEAR_TEXT,
+  };
+};
 
 const initialState = {
   content: '',

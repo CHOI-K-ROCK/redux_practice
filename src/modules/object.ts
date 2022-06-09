@@ -1,4 +1,30 @@
-import { UPDATE_CONTENT, UPDATE_TITLE, CLEAR_OBJECT } from './types';
+export const UPDATE_TITLE = 'object/UPDATE_TITLE';
+export const UPDATE_CONTENT = 'object/UPDATE_CONTENT';
+export const CLEAR_OBJECT = 'object/CLEAR_OBJECT';
+
+export const updateTitle = (title: string) => {
+  return {
+    type: UPDATE_TITLE,
+    payload: {
+      title,
+    },
+  };
+};
+
+export const updateContent = (content: string) => {
+  return {
+    type: UPDATE_CONTENT,
+    payload: {
+      content,
+    },
+  };
+};
+
+export const clearObject = () => {
+  return {
+    type: CLEAR_OBJECT,
+  };
+};
 
 const initialState = {
   obj: {
