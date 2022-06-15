@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { updateTitle, updateContent } from '../modules/object';
+import { objectActions } from '../modules/object';
 
 const Container = styled.section`
   position: relative;
@@ -42,7 +42,7 @@ function Object(): JSX.Element {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <button onClick={() => dispatch(updateTitle(title))}>
+        <button onClick={() => dispatch(objectActions.updateTitle(title))}>
           제목 업데이트
         </button>
       </div>
@@ -52,7 +52,7 @@ function Object(): JSX.Element {
           value={content}
           onChange={(e) => setContent(e.target.value)}
         />
-        <button onClick={() => dispatch(updateContent(content))}>
+        <button onClick={() => dispatch(objectActions.updateContent(content))}>
           내용 업데이트
         </button>
       </div>
