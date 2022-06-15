@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
-import { plusCounter, minusCounter, clearCounter } from '../modules/counter';
+import { counterActions } from '../modules/counter';
 
 const Container = styled.section`
   position: relative;
@@ -46,9 +46,15 @@ function Counter(): JSX.Element {
       <div className="title">Counter</div>
       <div className="count">{state.counterReducer.count}</div>
       <div className="buttons">
-        <button onClick={() => dispatch(plusCounter())}>더하기</button>
-        <button onClick={() => dispatch(minusCounter())}>빼기</button>
-        <button onClick={() => dispatch(clearCounter())}>초기화</button>
+        <button onClick={() => dispatch(counterActions.plusCounter())}>
+          더하기
+        </button>
+        <button onClick={() => dispatch(counterActions.minusCounter())}>
+          빼기
+        </button>
+        <button onClick={() => dispatch(counterActions.clearCounter())}>
+          초기화
+        </button>
       </div>
     </Container>
   );

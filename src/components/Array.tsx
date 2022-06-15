@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
-import { addElem, removeElem } from '../modules/array';
+import { arrayActions } from '../modules/array';
 
 const Container = styled.section`
   display: grid;
@@ -45,7 +45,7 @@ function Array(): JSX.Element {
   const [inputValue, setInputValue] = useState<string>('');
 
   const addHandler = () => {
-    dispatch(addElem(inputValue));
+    dispatch(arrayActions.addElem(inputValue));
     setInputValue('');
   };
 
@@ -57,7 +57,9 @@ function Array(): JSX.Element {
           return (
             <div key={idx} className="arr_el">
               <div>{el}</div>
-              <button onClick={() => dispatch(removeElem(idx))}>삭제</button>
+              <button onClick={() => dispatch(arrayActions.removeElem(idx))}>
+                삭제
+              </button>
             </div>
           );
         })}

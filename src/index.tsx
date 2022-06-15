@@ -3,15 +3,25 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 
 import { Provider } from 'react-redux';
-import { legacy_createStore } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 
-import rootReducer from './modules';
+import arrayReducer from '././modules/array';
+import counterReducer from '././modules/counter';
+import objectReducer from '././modules/object';
+import textReducer from '././modules/text';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-const store = legacy_createStore(rootReducer);
+const store = configureStore({
+  reducer: {
+    arrayReducer,
+    counterReducer,
+    objectReducer,
+    textReducer,
+  },
+});
 
 root.render(
   <Provider store={store}>

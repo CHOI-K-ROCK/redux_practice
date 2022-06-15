@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateText } from '../modules/text';
+import { textActions } from '../modules/text';
 import styled from 'styled-components';
 
 const Container = styled.section`
@@ -38,7 +38,7 @@ function Text(): JSX.Element {
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
-        <button onClick={() => dispatch(updateText(inputValue))}>
+        <button onClick={() => dispatch(textActions.updateText(inputValue))}>
           업데이트
         </button>
       </div>

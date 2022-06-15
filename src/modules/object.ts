@@ -1,30 +1,4 @@
-export const UPDATE_TITLE = 'object/UPDATE_TITLE';
-export const UPDATE_CONTENT = 'object/UPDATE_CONTENT';
-export const CLEAR_OBJECT = 'object/CLEAR_OBJECT';
-
-export const updateTitle = (title: string) => {
-  return {
-    type: UPDATE_TITLE,
-    payload: {
-      title,
-    },
-  };
-};
-
-export const updateContent = (content: string) => {
-  return {
-    type: UPDATE_CONTENT,
-    payload: {
-      content,
-    },
-  };
-};
-
-export const clearObject = () => {
-  return {
-    type: CLEAR_OBJECT,
-  };
-};
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   obj: {
@@ -33,38 +7,22 @@ const initialState = {
   },
 };
 
-const objectReducer = (
-  state = initialState,
-  action: { type: string; payload: { title: string; content: string } }
-) => {
-  switch (action.type) {
-    case UPDATE_TITLE:
-      return Object.assign({}, state.obj, {
-        obj: {
-          ...state.obj,
-          title: action.payload.title,
-        },
-      });
+const objectSlice = createSlice({
+  name: 'object',
+  initialState,
+  reducers: {
+    updateTitle(state, action) {
+      state.obj.title = action.payload;
+    },
+    updateContent(state, action) {
+      state.obj.content = action.payload;
+    },
+    clearObject(state) {
+      state.obj.title = '';
+      state.obj.content = '';
+    },
+  },
+});
 
-    case UPDATE_CONTENT:
-      return Object.assign({}, state.obj, {
-        obj: {
-          ...state.obj,
-          content: action.payload.content,
-        },
-      });
-
-    case CLEAR_OBJECT:
-      return Object.assign({}, state.obj, {
-        obj: {
-          title: '',
-          content: '',
-        },
-      });
-
-    default:
-      return state;
-  }
-};
-
-export default objectReducer;
+export const objectActions = objectSlice.actions;
+export default objectSlice.reducer;
